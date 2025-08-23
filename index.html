@@ -26,6 +26,9 @@
             background-color: var(--bg-light);
             color: var(--text-dark);
         }
+        .bg-dark {
+            background-color: var(--bg-dark);
+        }
         .font-serif {
             font-family: 'Playfair Display', serif;
         }
@@ -105,6 +108,11 @@
             70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(5, 150, 105, 0); }
             100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
         }
+        /* Star Rating */
+        .star-rating .lucide-star {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -113,7 +121,7 @@
     <header class="bg-white/95 backdrop-blur-lg shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#">
-                <img src="https://i.imgur.com/GOcxFa1.png" alt="Logo de Marketa Mía" class="h-12 w-auto">
+                <img src="https://i.imgur.com/QGH9n6T.jpeg" alt="Logo de Marketa Mía" class="h-12 w-auto">
             </a>
             <div class="hidden lg:flex items-center space-x-8 font-semibold">
                 <a href="#historia" class="text-gray-700 hover:text-primary transition">Nosotros</a>
@@ -162,26 +170,26 @@
                         <img src="https://placehold.co/800x600/F9FAFB/1F2937?text=Historia" class="rounded-xl shadow-lg">
                     </div>
                     <div class="fade-in-up">
-                        <h3 class="font-serif text-3xl font-bold mb-4" style="color: var(--primary);">Nuestra Historia</h3>
-                        <p class="text-gray-700 leading-relaxed">Marketa Mía nació en 2015 con un objetivo claro: ser más que un minisuper. Queríamos crear un espacio donde la comunidad pudiera encontrar productos de alta calidad con la confianza y el trato amable de la tienda de la esquina. Lo que comenzó como un pequeño local familiar, hoy se ha expandido a tres sucursales, pero nuestro corazón sigue siendo el mismo: servir a nuestros vecinos con lo mejor.</p>
+                        <h3 class="font-serif text-3xl font-bold mb-4" style="color: var(--primary);">6 Años de Historia</h3>
+                        <p class="text-gray-700 leading-relaxed">Marketa Mía nació en 2019 con un objetivo claro: ser más que un minisuper. Queríamos crear un espacio donde la comunidad pudiera encontrar productos de alta calidad con la confianza y el trato amable de la tienda de la esquina. Lo que comenzó como un pequeño local familiar, hoy se ha expandido a tres sucursales, pero nuestro corazón sigue siendo el mismo: servir a nuestros vecinos con lo mejor.</p>
                     </div>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="card bg-light-gray p-8 rounded-lg text-center fade-in-up">
+                    <div class="card bg-gray-100 p-8 rounded-lg text-center fade-in-up">
                         <div class="bg-emerald-100 text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="rocket" class="w-10 h-10"></i>
                         </div>
                         <h3 class="font-serif font-bold text-xl mb-2">Misión</h3>
                         <p class="text-gray-600">Ofrecer una experiencia de compra práctica y amigable, garantizando productos de alta calidad a precios justos.</p>
                     </div>
-                    <div class="card bg-light-gray p-8 rounded-lg text-center fade-in-up">
+                    <div class="card bg-gray-100 p-8 rounded-lg text-center fade-in-up">
                         <div class="bg-emerald-100 text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="eye" class="w-10 h-10"></i>
                         </div>
                         <h3 class="font-serif font-bold text-xl mb-2">Visión</h3>
                         <p class="text-gray-600">Ser el minisuper preferido en cada barrio, reconocidos por nuestra calidad, servicio y conexión con la comunidad.</p>
                     </div>
-                    <div class="card bg-light-gray p-8 rounded-lg text-center fade-in-up">
+                    <div class="card bg-gray-100 p-8 rounded-lg text-center fade-in-up">
                         <div class="bg-emerald-100 text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="gem" class="w-10 h-10"></i>
                         </div>
@@ -192,121 +200,132 @@
             </div>
         </section>
 
-        <!-- Canasta Básica Section -->
-        <section id="productos" class="py-24 bg-light-gray">
+        <!-- Productos Section -->
+        <section id="productos" class="py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="fade-in-up font-serif text-4xl md:text-5xl font-bold">Canasta Básica y Ofertas</h2>
-                    <p class="fade-in-up text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Lo esencial para tu hogar, siempre al mejor precio.</p>
+                    <h2 class="fade-in-up font-serif text-4xl md:text-5xl font-bold">Categorías Principales</h2>
+                    <p class="fade-in-up text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Descubre la selección que hemos preparado para ti.</p>
                 </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-                    <!-- Artículos de la Canasta Básica -->
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/fef08a/422006?text=Huevo" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Huevo Blanco (18 pzas)</h3>
-                        <p class="font-bold text-primary text-lg">$45.00</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up relative overflow-hidden">
-                        <div class="absolute top-2 -left-10 transform -rotate-45 bg-secondary text-dark text-xs font-bold px-10 py-1">OFERTA</div>
-                        <img src="https://placehold.co/400x400/3b82f6/FFFFFF?text=Leche" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Leche Entera 1L</h3>
-                        <p class="font-bold text-primary text-lg">$22.50</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/f97316/FFFFFF?text=Frijol" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Frijol Negro (1kg)</h3>
-                        <p class="font-bold text-primary text-lg">$32.00</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/f3f4f6/1f2937?text=Arroz" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Arroz Blanco (1kg)</h3>
-                        <p class="font-bold text-primary text-lg">$28.50</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/eab308/FFFFFF?text=Aceite" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Aceite Vegetal (1L)</h3>
-                        <p class="font-bold text-primary text-lg">$42.00</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/d1d5db/4b5563?text=Azúcar" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Azúcar Estándar (1kg)</h3>
-                        <p class="font-bold text-primary text-lg">$38.00</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/ca8a04/FFFFFF?text=Tortillas" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Tortillas de Maíz (1kg)</h3>
-                        <p class="font-bold text-primary text-lg">$24.00</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up relative overflow-hidden">
-                        <div class="absolute top-2 -left-10 transform -rotate-45 bg-secondary text-dark text-xs font-bold px-10 py-1">OFERTA</div>
-                        <img src="https://placehold.co/400x400/ef4444/FFFFFF?text=Pollo" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Pechuga de Pollo (kg)</h3>
-                        <p class="font-bold text-primary text-lg">$119.00</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/dc2626/FFFFFF?text=Jitomate" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Jitomate Saladet (kg)</h3>
-                        <p class="font-bold text-primary text-lg">$29.90</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/e2e8f0/475569?text=Cebolla" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Cebolla Blanca (kg)</h3>
-                        <p class="font-bold text-primary text-lg">$25.00</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/d97706/FFFFFF?text=Papa" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Papa Blanca (kg)</h3>
-                        <p class="font-bold text-primary text-lg">$27.50</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/84cc16/FFFFFF?text=Limón" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Limón con Semilla (kg)</h3>
-                        <p class="font-bold text-primary text-lg">$35.00</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/a855f7/FFFFFF?text=Pan" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Pan de Caja Blanco</h3>
-                        <p class="font-bold text-primary text-lg">$45.00</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/14b8a6/FFFFFF?text=Jabón" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Jabón de Baño (pza)</h3>
-                        <p class="font-bold text-primary text-lg">$15.00</p>
-                    </div>
-                    <div class="card bg-white p-4 rounded-lg text-center group fade-in-up">
-                        <img src="https://placehold.co/400x400/64748b/FFFFFF?text=Atún" class="w-full h-32 object-cover rounded-md mb-4">
-                        <h3 class="font-semibold">Atún en Aceite (lata)</h3>
-                        <p class="font-bold text-primary text-lg">$21.00</p>
-                    </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="#" class="card bg-white rounded-lg overflow-hidden group fade-in-up">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://i.imgur.com/bae3tqs.jpeg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-2xl">Frutas y Verduras</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card bg-white rounded-lg overflow-hidden group fade-in-up">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://i.imgur.com/2nCgeCX.jpeg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-2xl">Carnes y Salchichonería</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card bg-white rounded-lg overflow-hidden group fade-in-up">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://i.imgur.com/CZsei03.jpeg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-2xl">Abarrotes</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card bg-white rounded-lg overflow-hidden group fade-in-up">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://i.imgur.com/y6L8YeT.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-2xl">Limpieza y Hogar</h3>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
+        <!-- Opiniones Section -->
+        <section id="opiniones" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="fade-in-up">
+                        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">Deja tu Opinión y Gana</h2>
+                        <p class="text-lg text-gray-600 mb-8">Nos encanta saber de ti. Comparte tu experiencia y recibe un cupón de <strong>$10 de descuento</strong> en tu próxima compra como agradecimiento.</p>
+                        <form id="opinion-form" class="bg-gray-100 p-8 rounded-lg shadow-md">
+                            <div class="space-y-4">
+                                <input id="opinion-name" type="text" placeholder="Tu nombre" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none" required>
+                                <select id="opinion-branch" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none" required>
+                                    <option value="" disabled selected>Selecciona tu sucursal</option>
+                                    <option value="Monteverde">Monteverde</option>
+                                    <option value="Valle de las Flores">Valle de las Flores</option>
+                                    <option value="Providencia">Providencia</option>
+                                </select>
+                                <textarea id="opinion-text" placeholder="Escribe tu opinión aquí..." rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none" required></textarea>
+                                <button type="submit" class="btn btn-primary font-bold px-8 py-3 rounded-full text-lg w-full">Enviar Opinión</button>
+                            </div>
+                        </form>
+                        <div id="coupon-message" class="hidden mt-8 text-center bg-emerald-100 p-6 rounded-lg border-2 border-dashed border-primary">
+                            <h3 class="font-serif font-bold text-2xl text-primary mb-2">¡Gracias por tu opinión!</h3>
+                            <p class="text-gray-700 mb-4">Tómale captura de pantalla y preséntalo a tu sucursal más cercana para obtener $10 de descuento:</p>
+                            <p class="text-2xl font-bold text-dark bg-secondary inline-block px-4 py-2 rounded-md mt-2">MARKETA10</p>
+                        </div>
+                    </div>
+                    <div id="opinions-list" class="fade-in-up space-y-6">
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-center mb-2">
+                                <div class="flex text-secondary"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+                                <span class="text-xs font-bold text-gray-500 bg-gray-200 px-2 py-1 rounded-full">Providencia</span>
+                            </div>
+                            <p class="italic text-gray-700">"¡La mejor calidad y frescura de la zona! El trato siempre es amable."</p>
+                            <p class="font-bold text-right mt-2">- Ana Pérez</p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-center mb-2">
+                                <div class="flex text-secondary"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+                                <span class="text-xs font-bold text-gray-500 bg-gray-200 px-2 py-1 rounded-full">Monteverde</span>
+                            </div>
+                            <p class="italic text-gray-700">"Me encanta la variedad de productos que tienen. Siempre encuentro algo nuevo."</p>
+                            <p class="font-bold text-right mt-2">- Carlos Rodríguez</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Sucursales con Mapa -->
-        <section id="sucursales" class="py-24 bg-white">
+        <section id="sucursales" class="py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="fade-in-up font-serif text-4xl md:text-5xl font-bold">Nuestras Sucursales</h2>
                 </div>
                 <div class="grid md:grid-cols-5 gap-8">
                     <div class="md:col-span-3 fade-in-up">
-                        <img src="https://placehold.co/1200x800/e0e0e0/666666?text=Mapa+de+Sucursales+en+Jalisco" alt="Mapa de sucursales" class="w-full h-full min-h-[400px] object-cover rounded-xl shadow-lg">
+                        <img src="https://i.imgur.com/d2ltawV.png" alt="Mapa de sucursales en Jalisco" class="w-full h-full min-h-[400px] object-cover rounded-xl shadow-lg">
                     </div>
                     <div class="md:col-span-2 space-y-6">
-                        <div class="card bg-light-gray p-6 rounded-lg shadow-md fade-in-up">
-                            <h3 class="font-serif font-bold text-xl mb-3" style="color: var(--primary);">Marketa Mía Monteverde</h3>
-                            <p class="text-gray-600 flex items-start mb-4"><i data-lucide="map-pin" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i>BOULEVARD SENDEROS DE MONTEVERDE 25 LOCALES 3 Y 4, 45646 JALISCO</p>
-                            <a href="https://wa.me/5213338159036" target="_blank" class="btn bg-green-500 text-white font-bold py-2 px-4 rounded-full inline-flex items-center text-sm hover:bg-green-600"><i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>WhatsApp</a>
-                        </div>
-                        <div class="card bg-light-gray p-6 rounded-lg shadow-md fade-in-up">
-                            <h3 class="font-serif font-bold text-xl mb-3" style="color: var(--primary);">Marketa Mía Valle de las Flores</h3>
-                            <p class="text-gray-600 flex items-start mb-4"><i data-lucide="map-pin" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i>LOPEZ MATEOS SUR 111111 VALLE DE LAS FLORES, 45640, JALISCO</p>
-                            <a href="https://wa.me/5213320958489" target="_blank" class="btn bg-green-500 text-white font-bold py-2 px-4 rounded-full inline-flex items-center text-sm hover:bg-green-600"><i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>WhatsApp</a>
-                        </div>
-                        <div class="card bg-light-gray p-6 rounded-lg shadow-md fade-in-up">
+                        <div class="card bg-white p-6 rounded-lg shadow-md fade-in-up">
                             <h3 class="font-serif font-bold text-xl mb-3" style="color: var(--primary);">Marketa Mía Providencia</h3>
-                            <p class="text-gray-600 flex items-start mb-4"><i data-lucide="map-pin" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i>AV PABLO NERUDA #2120 COL PROVIDENCIA JALISCO</p>
-                            <a href="https://wa.me/5213339480011" target="_blank" class="btn bg-green-500 text-white font-bold py-2 px-4 rounded-full inline-flex items-center text-sm hover:bg-green-600"><i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>WhatsApp</a>
+                            <p class="text-gray-600 flex items-start mb-4"><i data-lucide="map-pin" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i>Av Pablo Neruda 2120, Providencia, 44630 Guadalajara, Jal.</p>
+                            <div class="flex space-x-2">
+                                <a href="https://maps.app.goo.gl/eDfDWaQiBacBQmK97" target="_blank" class="btn bg-gray-200 text-dark font-bold py-2 px-4 rounded-full inline-flex items-center text-sm hover:bg-gray-300 w-full justify-center"><i data-lucide="map" class="w-4 h-4 mr-2"></i>Ver Mapa</a>
+                                <a href="https://wa.me/5213339480011" target="_blank" class="btn bg-green-500 text-white font-bold py-2 px-4 rounded-full inline-flex items-center text-sm hover:bg-green-600 w-full justify-center"><i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>WhatsApp</a>
+                            </div>
+                        </div>
+                        <div class="card bg-white p-6 rounded-lg shadow-md fade-in-up">
+                            <h3 class="font-serif font-bold text-xl mb-3" style="color: var(--primary);">Marketa Mía Monteverde</h3>
+                            <p class="text-gray-600 flex items-start mb-4"><i data-lucide="map-pin" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i>Blvd. Senderos de Monteverde, Senderos de Monte Verde, 45646 Senderos de Monte Verde, Jal.</p>
+                            <div class="flex space-x-2">
+                                <a href="https://maps.app.goo.gl/1PGK6wAAvy2mcXiT8" target="_blank" class="btn bg-gray-200 text-dark font-bold py-2 px-4 rounded-full inline-flex items-center text-sm hover:bg-gray-300 w-full justify-center"><i data-lucide="map" class="w-4 h-4 mr-2"></i>Ver Mapa</a>
+                                <a href="https://wa.me/5213338159036" target="_blank" class="btn bg-green-500 text-white font-bold py-2 px-4 rounded-full inline-flex items-center text-sm hover:bg-green-600 w-full justify-center"><i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>WhatsApp</a>
+                            </div>
+                        </div>
+                        <div class="card bg-white p-6 rounded-lg shadow-md fade-in-up">
+                            <h3 class="font-serif font-bold text-xl mb-3" style="color: var(--primary);">Marketa Mía Valle de las Flores</h3>
+                            <p class="text-gray-600 flex items-start mb-4"><i data-lucide="map-pin" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i>Valle de las Flores, 45640 Guadalajara, Jal.</p>
+                               <div class="flex space-x-2">
+                                <a href="https://maps.app.goo.gl/da1CemjL1k8raxBp7" target="_blank" class="btn bg-gray-200 text-dark font-bold py-2 px-4 rounded-full inline-flex items-center text-sm hover:bg-gray-300 w-full justify-center"><i data-lucide="map" class="w-4 h-4 mr-2"></i>Ver Mapa</a>
+                                <a href="https://wa.me/5213320958489" target="_blank" class="btn bg-green-500 text-white font-bold py-2 px-4 rounded-full inline-flex items-center text-sm hover:bg-green-600 w-full justify-center"><i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>WhatsApp</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -314,15 +333,15 @@
         </section>
         
         <!-- Contacto Section -->
-        <section id="contacto" class="py-24 bg-light-gray">
+        <section id="contacto" class="py-24 bg-white">
             <div class="container mx-auto px-6">
-                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-16 text-center relative overflow-hidden">
-                     <div class="absolute -top-16 -right-16 text-primary opacity-10">
-                        <i data-lucide="message-circle" class="w-64 h-64"></i>
-                    </div>
+                <div class="bg-dark text-white rounded-2xl shadow-xl p-8 md:p-16 text-center relative overflow-hidden">
+                       <div class="absolute -top-16 -right-16 text-primary opacity-10">
+                            <i data-lucide="message-circle" class="w-64 h-64"></i>
+                        </div>
                     <div class="relative z-10">
-                        <h2 class="font-serif text-4xl md:text-5xl font-extrabold mb-4 text-dark">¿Tienes alguna duda?</h2>
-                        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Nuestro asistente virtual está disponible 24/7 para ayudarte con horarios, sucursales o productos. ¡Pruébalo!</p>
+                        <h2 class="font-serif text-4xl md:text-5xl font-extrabold mb-4">¿Tienes alguna duda?</h2>
+                        <p class="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">Nuestro asistente virtual está disponible 24/7 para ayudarte. Pregúntale por horarios, productos o <strong>haz tu pedido para tu sucursal más cercana</strong>. Aceptamos todos los métodos de pago. ¡Pruébalo!</p>
                         <button id="open-chatbot-btn" class="btn bg-secondary text-dark font-bold py-4 px-10 rounded-full inline-flex items-center space-x-3 text-lg hover:opacity-90 transition-opacity">
                             <i data-lucide="bot" class="w-6 h-6"></i>
                             <span>Chatear con Asistente Virtual</span>
@@ -338,7 +357,7 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <a href="#">
-                        <img src="https://i.imgur.com/GOcxFa1.png" alt="Logo de Marketa Mía" class="h-10 w-auto mb-4">
+                        <img src="https://i.imgur.com/QGH9n6T.jpeg" alt="Logo de Marketa Mía" class="h-10 w-auto mb-4">
                     </a>
                     <p class="text-gray-400">Tu minisuper de confianza.</p>
                 </div>
@@ -360,8 +379,8 @@
                  <div>
                     <h3 class="font-bold text-lg mb-4">Síguenos</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                        <a href="https://www.instagram.com/marketaminisuper/" target="_blank" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                        <a href="https://www.facebook.com/MarketaMinisuper/" target="_blank" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
                     </div>
                 </div>
             </div>
@@ -374,7 +393,7 @@
 
     <!-- Chatbot -->
     <div id="chatbot-trigger" class="fixed bottom-6 right-6 bg-primary rounded-full p-2 cursor-pointer shadow-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-110">
-        <img src="https://i.imgur.com/GOcxFa1.png" alt="Asistente Virtual" class="w-12 h-12">
+        <img src="https://i.imgur.com/QGH9n6T.jpeg" alt="Asistente Virtual" class="w-12 h-12 rounded-full">
     </div>
 
     <div id="chatbot-container" class="fixed bottom-24 right-6 w-80 h-[28rem] bg-white rounded-xl shadow-2xl flex flex-col hidden opacity-0 -translate-y-4">
@@ -436,6 +455,50 @@
                     }
                 }
             );
+        });
+
+        // Opinion Form Logic
+        const opinionForm = document.getElementById('opinion-form');
+        const couponMessage = document.getElementById('coupon-message');
+        
+        opinionForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('opinion-name').value;
+            const text = document.getElementById('opinion-text').value;
+            const branch = document.getElementById('opinion-branch').value;
+            
+            // Simple validation
+            if (!name || !text || !branch) {
+                // In a real app, you'd show a nicer message, not an alert.
+                // But for this example, we'll keep it simple.
+                console.error("Validation failed: All fields are required.");
+                return;
+            }
+
+            const opinionsList = document.getElementById('opinions-list');
+            const newOpinion = document.createElement('div');
+            newOpinion.className = 'bg-gray-100 p-6 rounded-lg shadow-md';
+            
+            newOpinion.innerHTML = `
+                <div class="flex justify-between items-center mb-2">
+                    <div class="flex text-secondary">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gray-500 bg-gray-200 px-2 py-1 rounded-full">${branch}</span>
+                </div>
+                <p class="italic text-gray-700">"${text}"</p>
+                <p class="font-bold text-right mt-2">- ${name}</p>
+            `;
+            
+            opinionsList.prepend(newOpinion);
+            lucide.createIcons();
+
+            opinionForm.style.display = 'none';
+            couponMessage.style.display = 'block';
         });
 
         // Chatbot Logic
@@ -545,19 +608,27 @@
             - **Pagos:** Efectivo, tarjetas de crédito/débito y vales de despensa.
             `;
 
-            const apiKey = "AIzaSyD4hkCvFV90I56MXVy0jibpa0iZNlXSIuo";
+            const apiKey = "AIzaSyD4hkCvFV90I56MXVy0jibpa0iZNlXSIuo"; 
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
             
             const payload = { contents: [{ parts: [{ text: systemPrompt + "\n\nPregunta del cliente: " + userMessage }] }] };
 
             try {
                 const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-                if (!response.ok) return { message: "Lo siento, estoy teniendo problemas. Intenta de nuevo.", quickReplies: [] };
+                if (!response.ok) {
+                    console.error("API Error:", response.status, await response.text());
+                    return { message: "Lo siento, estoy teniendo problemas para conectarme. Por favor, intenta de nuevo más tarde.", quickReplies: [] };
+                }
                 const result = await response.json();
-                const text = result.candidates[0].content.parts[0].text;
-                return { message: text, quickReplies: [] };
+                if (result.candidates && result.candidates.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    return { message: text, quickReplies: [] };
+                } else {
+                     return { message: "No pude procesar esa respuesta. ¿Puedes intentar preguntar de otra manera?", quickReplies: [] };
+                }
             } catch (error) {
-                return { message: "Lo siento, ocurrió un error.", quickReplies: [] };
+                console.error("Fetch Error:", error);
+                return { message: "Lo siento, ocurrió un error de conexión. Revisa tu conexión a internet.", quickReplies: [] };
             }
         };
 
